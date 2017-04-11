@@ -6,6 +6,6 @@ class Page_Data {
     public $embeddedStyle="";
 
     public function addCSS( $href ){
-        $this->css .= "<link href='$href' rel='stylesheet'/>";
-    }
+    $this->css .= "<link href='$href' rel='stylesheet' />";
+}
 }

@@ -6,6 +6,9 @@ include_once "classes/Page_Data.class.php";
 $pageData = new Page_Data();
 $pageData->title = "Dynamic image gallery";
 $pageData->content = include_once "views/navigation.php";
+$pageData->addCSS('css/layout.css');
+$pageData->addCSS('css/navigation.css');
+
 $userClicked = isset($_GET['page']);
 
 if ( $userClicked ) {
@@ -15,8 +18,5 @@ $fileToLoad = "gallery";
 }
 $pageData->content .=include_once "views/$fileToLoad.php";
 $page = include_once "templates/page.php";
-
-$pageData->addCSS('css/layout.css');
-$pageData->addCSS('css/navigation.css');
 
 echo $page;
