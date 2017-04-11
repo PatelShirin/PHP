@@ -13,7 +13,7 @@ return $output;
 
 function showQuizResponse ( $answer ) {
     $response = "<p>You clicked $answer</p>";
-    if ( $answer == "yes"){
+    if ( $answer === "yes"){
         $response .= " - I know exactly how you feel!";
     }
     $response .= "<p>
