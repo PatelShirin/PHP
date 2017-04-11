@@ -20,3 +20,4 @@ $pageData->content .=include_once "views/$fileToLoad.php";
 $page = include_once "templates/page.php";
 
 echo $page;
+// test
