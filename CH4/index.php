@@ -12,9 +12,9 @@ $pageData->addCSS('css/navigation.css');
 $userClicked = isset($_GET['page']);
 
 if ( $userClicked ) {
-$fileToLoad = $_GET['page'];
+    $fileToLoad = $_GET['page'];
 } else {
-$fileToLoad = "gallery";
+    $fileToLoad = "gallery";
 }
 $pageData->content .=include_once "views/$fileToLoad.php";
 $page = include_once "templates/page.php";
