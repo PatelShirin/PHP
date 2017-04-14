@@ -1,2 +1,2 @@
 <?php
-echo "Hello from PHP (Modified)";
+echo "Hello from PHP";
