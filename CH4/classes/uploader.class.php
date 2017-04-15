@@ -28,22 +28,6 @@ class Uploader {
 		}
 		return $succes;
 	}
-	
-	function upload(){
-		include_once "classes/Uploader.class.php";
-		//i		mage-data is the name attribute used in <input type='file' />
-		$uploader = new Uploader( "image-data" );
-		$uploader->saveIn("img");
-		$fileUploaded = $uploader->save();
-
-		if ( $fileUploaded ) {
-			$out = "new file uploaded";
-		}
-		else {
-			$out = "something went wrong";
-		}
-		return $out;
-	}
 }
 
 
