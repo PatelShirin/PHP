@@ -5,8 +5,8 @@ class Uploader {
 	private $filename;
 	private $fileData;
 	private $destination;
-	
-	//d	eclare a constructor method
+
+	//declare a constructor method
 	public function __construct( $key ) {
 		$this->filename = $_FILES[$key]['name'];
 		$this->fileData = $_FILES[$key]['tmp_name'];
@@ -19,7 +19,7 @@ class Uploader {
 	public function save(){
 		$folderIsWriteAble = is_writable( $this->destination );
 		if( $folderIsWriteAble ){
-			$name = "$this->destination/$this->filename";			
+			$name = "$this->destination/$this->filename";
 			$succes = move_uploaded_file( $this->fileData, $name );
 		}
 		else {
@@ -28,6 +28,23 @@ class Uploader {
 		}
 		return $succes;
 	}
+	
+	function upload(){
+		include_once "classes/Uploader.class.php";
+		//i		mage-data is the name attribute used in <input type='file' />
+		$uploader = new Uploader( "image-data" );
+		$uploader->saveIn("img");
+		$fileUploaded = $uploader->save();
+
+		if ( $fileUploaded ) {
+			$out = "new file uploaded";
+		}
+		else {
+			$out = "something went wrong";
+		}
+		return $out;
+	}
 }
+
 
 
