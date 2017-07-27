@@ -1,9 +1,14 @@
 /* code listing for css/layout.css */
-h1{color:red;}
-#images ul{
-  list-style: none;
+
+h1 {
+    color: red;
 }
-#images li{
-  display: inline;
+
+#images ul {
+    list-style: none;
 }
-	
+
+#images li {
+    display: inline;
+    margin: 0 20px 0px 0;
+}
