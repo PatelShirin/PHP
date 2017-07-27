@@ -16,7 +16,7 @@ return $output;
 
 //declare new function
 function upload(){
-	include_once "classes/Uploader.class.php";
+	include_once "classes/uploader.class.php";
 	
 	//i	mage-data is the name attribute used in <input type='file' />
 	$uploader = new Uploader( "image-data" );
