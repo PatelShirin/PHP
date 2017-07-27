@@ -18,7 +18,7 @@ function showImages(){
 		$mimeType = $fileInfo->file( $src );
 		
 		if ( $mimeType === 'image/jpeg' ) {
-			$out .= "<li><img src='$src' /></li>";
+			$out .= "<li><img src='$src' height=150 width=150/></li>";
 		}
 		$filesInFolder->next();
 	}
